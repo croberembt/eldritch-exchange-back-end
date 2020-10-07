@@ -8,7 +8,9 @@ const FileStore = require('session-file-store')(session);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+
 const cartRouter = require('./routes/cartRouter');
+const contactRouter = require('./routes/contactRouter');
 
 const mongoose = require('mongoose'); 
 
@@ -70,6 +72,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/carts', cartRouter);
+app.use('/contacts', contactRouter);
 
 
 
